@@ -631,15 +631,7 @@ svg {
   z-index: 1;
 }
 
-.intro-section::before,
-.services-section::before,
-.process-section::before,
-.reviews-section::before,
-.gallery-section::before,
-.location-section::before,
-.booking-section::before,
-.stats-band::before,
-.site-footer::before {
+.booking-section::before {
   position: absolute;
   inset: 0;
   z-index: 0;
@@ -1687,15 +1679,19 @@ svg {
   }
 
   .hero {
-    min-height: 690px;
+    min-height: 760px;
     padding-top: calc(var(--header-height) + 52px);
-    padding-bottom: 166px;
+    padding-bottom: 196px;
+  }
+
+  .hero-image {
+    object-position: 76% center;
   }
 
   .hero-overlay {
     background:
-      linear-gradient(180deg, rgba(5, 17, 30, 0.86), rgba(5, 17, 30, 0.58) 52%, rgba(5, 17, 30, 0.86)),
-      linear-gradient(90deg, rgba(5, 17, 30, 0.8), rgba(5, 17, 30, 0.2));
+      linear-gradient(180deg, rgba(5, 17, 30, 0.7), rgba(5, 17, 30, 0.26) 52%, rgba(5, 17, 30, 0.62)),
+      linear-gradient(90deg, rgba(5, 17, 30, 0.9) 0%, rgba(5, 17, 30, 0.62) 45%, rgba(5, 17, 30, 0.02) 100%);
   }
 
   .hero h1 {
