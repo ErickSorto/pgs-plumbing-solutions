@@ -22,6 +22,9 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  alternates: {
+    canonical: "/",
+  },
   title: "PGS Plumbing Solutions LLC | Maryland Plumbing Contractor",
   description:
     "Residential and commercial plumbing contractor serving Prince George's County, Maryland, Washington DC, Virginia, and nearby areas.",
@@ -32,6 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: "PGS Plumbing Solutions LLC",
+    url: "/",
   },
   twitter: {
     card: "summary_large_image",

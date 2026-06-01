@@ -1384,14 +1384,19 @@ svg {
   bottom: 0;
   z-index: 80;
   display: none;
+  max-height: 100dvh;
   width: min(420px, 88vw);
   align-content: start;
   gap: 24px;
-  padding: 24px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: max(24px, env(safe-area-inset-top)) 24px max(24px, env(safe-area-inset-bottom));
   background: var(--paper);
   color: var(--navy-deep);
   box-shadow: var(--shadow-soft);
+  scrollbar-gutter: stable;
   transition: transform 220ms ease;
+  -webkit-overflow-scrolling: touch;
 }
 
 .mobile-drawer {
