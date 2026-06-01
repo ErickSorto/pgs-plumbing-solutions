@@ -10,12 +10,13 @@ type Review = {
   quote: string;
   image: string;
 };
+type Language = "en" | "es";
 
 const autoplayDelay = 4200;
 
-function Stars() {
+function Stars({ language }: { language: Language }) {
   return (
-    <div className="stars review-stars" aria-label="5 out of 5 stars">
+    <div className="stars review-stars" aria-label={language === "es" ? "5 de 5 estrellas" : "5 out of 5 stars"}>
       {Array.from({ length: 5 }).map((_, index) => (
         <Star key={index} aria-hidden="true" />
       ))}
@@ -23,7 +24,8 @@ function Stars() {
   );
 }
 
-export default function ReviewCarousel({ reviews }: { reviews: readonly Review[] }) {
+export default function ReviewCarousel({ language, reviews }: { language: Language; reviews: readonly Review[] }) {
+  const isSpanish = language === "es";
   const scrollerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -120,17 +122,17 @@ export default function ReviewCarousel({ reviews }: { reviews: readonly Review[]
   }, [activeIndex, reviews.length, scrollToReview]);
 
   return (
-    <div className="review-carousel" aria-label="Customer review carousel">
+    <div className="review-carousel" aria-label={isSpanish ? "Carrusel de reseñas de clientes" : "Customer review carousel"}>
       <div className="review-carousel-toolbar">
         <div className="review-count">
           <strong>{String(activeIndex + 1).padStart(2, "0")}</strong>
           <span>/ {String(reviews.length).padStart(2, "0")}</span>
         </div>
         <div className="review-controls">
-          <button aria-label="Previous review" onClick={() => move(-1)} type="button">
+          <button aria-label={isSpanish ? "Reseña anterior" : "Previous review"} onClick={() => move(-1)} type="button">
             <ChevronLeft aria-hidden="true" />
           </button>
-          <button aria-label="Next review" onClick={() => move(1)} type="button">
+          <button aria-label={isSpanish ? "Siguiente reseña" : "Next review"} onClick={() => move(1)} type="button">
             <ChevronRight aria-hidden="true" />
           </button>
         </div>
@@ -149,7 +151,7 @@ export default function ReviewCarousel({ reviews }: { reviews: readonly Review[]
               />
             </div>
             <div className="review-card-copy">
-              <Stars />
+              <Stars language={language} />
               <p>&quot;{review.quote}&quot;</p>
               <div>
                 <strong>{review.name}</strong>
@@ -164,7 +166,7 @@ export default function ReviewCarousel({ reviews }: { reviews: readonly Review[]
         {reviews.map((review, index) => (
           <button
             aria-current={activeIndex === index ? "true" : undefined}
-            aria-label={`Show ${review.name} review`}
+            aria-label={isSpanish ? `Mostrar reseña de ${review.name}` : `Show ${review.name} review`}
             className={activeIndex === index ? "active" : undefined}
             key={review.name}
             onClick={() => {

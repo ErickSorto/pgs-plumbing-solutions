@@ -13,7 +13,11 @@ export default function DrawerAutoClose() {
         return;
       }
 
-      if (!target.closest(".mobile-drawer a, .language-drawer a")) {
+      if (target.closest(".drawer-language-toggle button")) {
+        return;
+      }
+
+      if (!target.closest(".mobile-drawer a, .mobile-drawer button, .language-drawer a, .language-drawer button")) {
         return;
       }
 

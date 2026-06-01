@@ -243,7 +243,6 @@ svg {
   gap: 10px;
 }
 
-.language-button,
 .menu-button,
 .nav-cta,
 .primary-link,
@@ -262,7 +261,6 @@ svg {
   transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
-.language-button,
 .menu-button,
 .nav-cta {
   border: 1px solid rgba(255, 255, 255, 0.26);
@@ -270,9 +268,53 @@ svg {
   cursor: pointer;
 }
 
-.language-button,
 .nav-cta {
   padding: 10px 14px;
+}
+
+.language-toggle {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 999px;
+  padding: 4px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.language-toggle svg {
+  width: 18px;
+  height: 18px;
+  margin-inline: 8px 4px;
+  stroke-width: 2.2;
+}
+
+.language-toggle button {
+  display: inline-flex;
+  min-width: 42px;
+  min-height: 36px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  padding: 0 11px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.72);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 950;
+  letter-spacing: 0;
+  transition: background 180ms ease, color 180ms ease, box-shadow 180ms ease;
+}
+
+.language-toggle button.active {
+  background: #ffffff;
+  color: var(--navy-deep);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
 }
 
 .menu-button {
@@ -281,7 +323,6 @@ svg {
   padding: 0;
 }
 
-.language-button svg,
 .menu-button svg,
 .nav-cta svg,
 .primary-link svg,
@@ -294,7 +335,7 @@ svg {
   stroke-width: 2.2;
 }
 
-.language-button:hover,
+.language-toggle:hover,
 .menu-button:hover,
 .nav-cta:hover,
 .primary-link:hover,
@@ -306,7 +347,7 @@ svg {
 }
 
 .nav-cta:hover,
-.language-button:hover,
+.language-toggle:hover,
 .menu-button:hover {
   background: rgba(255, 255, 255, 0.2);
 }
@@ -1496,21 +1537,29 @@ svg {
 }
 
 .drawer-language-actions {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
+  display: block;
 }
 
-.drawer-language-actions a {
-  display: inline-flex;
-  min-height: 42px;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgba(18, 54, 87, 0.16);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.74);
-  color: var(--navy);
-  font-weight: 900;
+.drawer-language-toggle {
+  width: 100%;
+  min-height: 48px;
+  border-color: rgba(18, 54, 87, 0.16);
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--navy-deep);
+}
+
+.drawer-language-toggle button {
+  flex: 1;
+  color: rgba(18, 54, 87, 0.62);
+}
+
+.drawer-language-toggle button.active {
+  background: var(--navy);
+  color: #ffffff;
+}
+
+.drawer-language-toggle svg {
+  display: none;
 }
 
 .drawer-cta {
@@ -1536,12 +1585,16 @@ svg {
   line-height: 1.7;
 }
 
-.translation-block a {
+.translation-block a,
+.translation-block button {
   width: max-content;
+  border: 0;
   border-radius: 8px;
   padding: 12px 14px;
   background: var(--navy);
   color: #ffffff;
+  cursor: pointer;
+  font: inherit;
   font-weight: 900;
 }
 
@@ -1660,18 +1713,6 @@ svg {
     display: flex;
     justify-content: space-between;
     background: rgba(7, 27, 45, 0.96);
-  }
-
-  .language-button {
-    width: 46px;
-    overflow: hidden;
-    padding: 0;
-    color: transparent;
-    font-size: 0;
-  }
-
-  .language-button svg {
-    color: #ffffff;
   }
 
   .nav-cta {
@@ -1859,7 +1900,7 @@ svg {
     padding: 0;
   }
 
-  .language-button {
+  .topbar-language-toggle {
     display: none;
   }
 
