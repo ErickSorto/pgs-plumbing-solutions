@@ -1741,13 +1741,13 @@ svg {
   }
 
   .hero-image {
-    object-position: 76% center;
+    object-position: 62% center;
   }
 
   .hero-overlay {
     background:
-      linear-gradient(180deg, rgba(5, 17, 30, 0.7), rgba(5, 17, 30, 0.26) 52%, rgba(5, 17, 30, 0.62)),
-      linear-gradient(90deg, rgba(5, 17, 30, 0.9) 0%, rgba(5, 17, 30, 0.62) 45%, rgba(5, 17, 30, 0.02) 100%);
+      linear-gradient(180deg, rgba(5, 17, 30, 0.62), rgba(5, 17, 30, 0.18) 52%, rgba(5, 17, 30, 0.5)),
+      linear-gradient(90deg, rgba(5, 17, 30, 0.88) 0%, rgba(5, 17, 30, 0.54) 43%, rgba(5, 17, 30, 0) 100%);
   }
 
   .hero h1 {
