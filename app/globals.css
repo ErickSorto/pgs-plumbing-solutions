@@ -1496,6 +1496,8 @@ svg {
 }
 
 .drawer-language {
+  position: relative;
+  z-index: 2;
   display: grid;
   gap: 14px;
   border: 1px solid var(--line);
@@ -1543,19 +1545,24 @@ svg {
 
 .drawer-language-actions {
   display: block;
+  position: relative;
+  z-index: 3;
 }
 
 .drawer-language-toggle {
   width: 100%;
-  min-height: 48px;
+  min-height: 56px;
   border-color: rgba(18, 54, 87, 0.16);
   background: rgba(255, 255, 255, 0.7);
   color: var(--navy-deep);
+  touch-action: manipulation;
 }
 
 .drawer-language-toggle button {
   flex: 1;
+  min-height: 46px;
   color: rgba(18, 54, 87, 0.62);
+  touch-action: manipulation;
 }
 
 .drawer-language-toggle button.active {
@@ -1568,6 +1575,9 @@ svg {
 }
 
 .drawer-cta {
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
   background: var(--water);
   color: #ffffff;
 }

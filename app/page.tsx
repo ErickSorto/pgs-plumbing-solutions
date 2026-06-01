@@ -335,10 +335,26 @@ export default function Home() {
           </div>
           <div className="drawer-language-actions" aria-label={isSpanish ? "Opciones de traducción" : "Translation options"}>
             <div className="language-toggle drawer-language-toggle" role="group">
-              <button aria-pressed={!isSpanish} className={!isSpanish ? "active" : undefined} onClick={() => setLanguage("en")} type="button">
+              <button
+                aria-pressed={!isSpanish}
+                className={!isSpanish ? "active" : undefined}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setLanguage("en");
+                }}
+                type="button"
+              >
                 English
               </button>
-              <button aria-pressed={isSpanish} className={isSpanish ? "active" : undefined} onClick={() => setLanguage("es")} type="button">
+              <button
+                aria-pressed={isSpanish}
+                className={isSpanish ? "active" : undefined}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  setLanguage("es");
+                }}
+                type="button"
+              >
                 Español
               </button>
             </div>

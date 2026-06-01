@@ -18,7 +18,14 @@ const siteUrl =
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
     : process.env.VERCEL_URL
       ? `https://${process.env.VERCEL_URL}`
-      : "http://localhost:3000");
+      : "https://pgs-plumbing-solutions.vercel.app");
+
+const shareImage = {
+  url: "/pgs/share-preview.jpg",
+  width: 1200,
+  height: 630,
+  alt: "PGS Plumbing Solutions LLC preview card with logo and plumbing company name",
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,12 +43,14 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "PGS Plumbing Solutions LLC",
     url: "/",
+    images: [shareImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "PGS Plumbing Solutions LLC",
     description:
       "Residential and commercial plumbing contractor serving Prince George's County, Maryland, Washington DC, Virginia, and nearby areas.",
+    images: [shareImage],
   },
 };
 
