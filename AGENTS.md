@@ -171,12 +171,12 @@ This file is for future AI agents and developers working on this project. Treat 
 - Gallery data lives in `const gallery` in `app/page.tsx`.
 - Display exactly six gallery tiles unless the user explicitly asks otherwise.
 - Current visible gallery images:
+  - `/pgs/pgs-laundry-copper-lines.webp`
+  - `/pgs/pgs-water-heater-install.webp`
+  - `/pgs/pgs-bathtub-rough-in.webp`
+  - `/pgs/pgs-clawfoot-tub-supply-lines.webp`
   - `/pgs/site-work-2.webp`
-  - `/pgs/site-work-1.webp`
-  - `/pgs/pgs-real-valve.webp`
-  - `/pgs/site-work-4.webp`
   - `/pgs/site-work-3.webp`
-  - `/pgs/pgs-real-tools.webp`
 - Gallery grid rules:
   - desktop: `.gallery-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }`
   - mobile: `.gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }`
