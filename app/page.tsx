@@ -110,25 +110,7 @@ const process = [
 
 const gallery = [
   {
-    image: "/pgs/site-work-1.jpg",
-    enTitle: "Service readiness",
-    esTitle: "Listos para servir",
-    enDetail: "Current PGS site imagery",
-    esDetail: "Imagen actual del sitio PGS",
-    enAlt: "Plumber preparing tools for a plumbing service visit",
-    esAlt: "Plomero preparando herramientas para una visita de servicio",
-  },
-  {
-    image: "/pgs/gallery-commercial.png",
-    enTitle: "Commercial systems",
-    esTitle: "Sistemas comerciales",
-    enDetail: "Realistic generated portfolio visual",
-    esDetail: "Visual realista generado para portafolio",
-    enAlt: "Commercial plumbing installation with copper and black pipe",
-    esAlt: "Instalación de plomería comercial con tubería de cobre y negra",
-  },
-  {
-    image: "/pgs/site-work-2.jpg",
+    image: "/pgs/site-work-2.webp",
     enTitle: "Fixture work",
     esTitle: "Trabajo en accesorios",
     enDetail: "Current PGS site imagery",
@@ -137,16 +119,34 @@ const gallery = [
     esAlt: "Detalle de reparación de accesorio de plomería del sitio PGS",
   },
   {
-    image: "/pgs/gallery-vanity.png",
-    enTitle: "Clean finish",
-    esTitle: "Acabado limpio",
-    enDetail: "Realistic generated portfolio visual",
-    esDetail: "Visual realista generado para portafolio",
-    enAlt: "Modern vanity plumbing installation checked for leaks",
-    esAlt: "Instalación moderna de tocador revisada contra fugas",
+    image: "/pgs/site-work-1.webp",
+    enTitle: "Service readiness",
+    esTitle: "Listos para servir",
+    enDetail: "Current PGS site imagery",
+    esDetail: "Imagen actual del sitio PGS",
+    enAlt: "Plumber preparing tools for a plumbing service visit",
+    esAlt: "Plomero preparando herramientas para una visita de servicio",
   },
   {
-    image: "/pgs/site-work-3.jpg",
+    image: "/pgs/pgs-real-valve.webp",
+    enTitle: "System diagnostics",
+    esTitle: "Diagnóstico del sistema",
+    enDetail: "Official-site plumbing visual",
+    esDetail: "Visual de plomería del sitio oficial",
+    enAlt: "Plumber checking water system valves and connections",
+    esAlt: "Plomero revisando válvulas y conexiones del sistema de agua",
+  },
+  {
+    image: "/pgs/site-work-4.webp",
+    enTitle: "Installed right",
+    esTitle: "Instalado correctamente",
+    enDetail: "Current PGS site imagery",
+    esDetail: "Imagen actual del sitio PGS",
+    enAlt: "Plumbing installation detail from the PGS website",
+    esAlt: "Detalle de instalación de plomería del sitio PGS",
+  },
+  {
+    image: "/pgs/site-work-3.webp",
     enTitle: "Reliable repair",
     esTitle: "Reparación confiable",
     enDetail: "Current PGS site imagery",
@@ -155,13 +155,13 @@ const gallery = [
     esAlt: "Imagen de servicio de reparación de plomería del sitio PGS",
   },
   {
-    image: "/pgs/site-work-4.jpg",
-    enTitle: "Installed right",
-    esTitle: "Instalado correctamente",
-    enDetail: "Current PGS site imagery",
-    esDetail: "Imagen actual del sitio PGS",
-    enAlt: "Plumbing installation detail from the PGS website",
-    esAlt: "Detalle de instalación de plomería del sitio PGS",
+    image: "/pgs/pgs-real-tools.webp",
+    enTitle: "Prepared tools",
+    esTitle: "Herramientas listas",
+    enDetail: "Official-site plumbing visual",
+    esDetail: "Visual de plomería del sitio oficial",
+    enAlt: "Plumbing tools and fittings prepared for a professional service visit",
+    esAlt: "Herramientas y accesorios de plomería preparados para una visita profesional",
   },
 ] as const;
 
@@ -171,7 +171,7 @@ const reviews = [
     esName: "Cliente de PGS",
     enMeta: "Personalized consultation",
     esMeta: "Consulta personalizada",
-    image: "/pgs/gallery-vanity.png",
+    image: "/pgs/gallery-vanity.webp",
     enQuote: "Excellent service and personalized consultation. PGS Plumbing Solutions LLC truly made us feel valued.",
     esQuote: "Excelente servicio y consulta personalizada. PGS Plumbing Solutions LLC realmente nos hizo sentir valorados.",
   },
@@ -180,7 +180,7 @@ const reviews = [
     esName: "Dueño de casa",
     enMeta: "Residential plumbing",
     esMeta: "Plomería residencial",
-    image: "/pgs/site-work-2.jpg",
+    image: "/pgs/site-work-2.webp",
     enQuote: "The visit felt organized from the first call through the final check. Clear, careful, and professional.",
     esQuote: "La visita se sintió organizada desde la primera llamada hasta la revisión final. Claro, cuidadoso y profesional.",
   },
@@ -189,7 +189,7 @@ const reviews = [
     esName: "Negocio local",
     enMeta: "Commercial service",
     esMeta: "Servicio comercial",
-    image: "/pgs/gallery-commercial.png",
+    image: "/pgs/gallery-commercial.webp",
     enQuote: "Reliable plumbing support with practical scheduling and minimal disruption to daily operations.",
     esQuote: "Apoyo de plomería confiable con horarios prácticos y mínima interrupción de las operaciones diarias.",
   },
@@ -198,7 +198,7 @@ const reviews = [
     esName: "Cliente de PGS",
     enMeta: "Repair and installation",
     esMeta: "Reparación e instalación",
-    image: "/pgs/site-work-4.jpg",
+    image: "/pgs/site-work-4.webp",
     enQuote: "A dedicated team focused on high-quality plumbing work the community can trust.",
     esQuote: "Un equipo dedicado a trabajos de plomería de alta calidad en los que la comunidad puede confiar.",
   },
@@ -395,7 +395,7 @@ export default function Home() {
 
       <section className="hero" id="home">
         <Image
-          src="/pgs/hero-plumbing.png"
+          src="/pgs/hero-plumbing.webp"
           alt={isSpanish ? "Plomero profesional inspeccionando un cuarto de servicios residencial moderno" : "Professional plumber inspecting a modern residential utility room"}
           fill
           priority
@@ -507,7 +507,7 @@ export default function Home() {
       <section className="process-section">
         <div className="process-visual">
           <Image
-            src="/pgs/site-work-1.jpg"
+            src="/pgs/site-work-1.webp"
             alt={isSpanish ? "Herramientas de plomería preparadas para una visita de servicio" : "Plumbing tools prepared for a service visit"}
             fill
             sizes="(max-width: 900px) 100vw, 42vw"
